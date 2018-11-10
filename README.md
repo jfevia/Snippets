@@ -1,2 +1,2 @@
 # Snippets
-A collection of snippets in C# for Visual Studio.
+A collection of code snippets in C# for Visual Studio.

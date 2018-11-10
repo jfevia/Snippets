@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+	xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>ViewModelProperty</Title>
+			<Author>Jesus Fernandez</Author>
+			<Description>Creates a property with a backing field. The backing field targets the Set method of an object implementing INotifyPropertyChanged.</Description>
+			<HelpUrl>github.com/jfevia/Snippets</HelpUrl>
+			<Shortcut>npcprop</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>T</ID>
+					<ToolTip>The data type.</ToolTip>
+					<Default>T</Default>
+					<Function></Function>
+				</Literal>
+				<Literal Editable="true">
+					<ID>_propertyName</ID>
+					<ToolTip>The name of the backing field.</ToolTip>
+					<Default>_propertyName</Default>
+					<Function></Function>
+				</Literal>
+				<Literal Editable="true">
+					<ID>PropertyName</ID>
+					<ToolTip>The name of the property.</ToolTip>
+					<Default>PropertyName</Default>
+					<Function></Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" Delimiter="$">
+				<![CDATA[private $T$ $_propertyName$;
+public $T$ $PropertyName$
+{
+    get => $_propertyName$;
+    set => Set(nameof($PropertyName$), ref $_propertyName$, value);
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

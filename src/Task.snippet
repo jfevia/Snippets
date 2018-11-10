@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+	xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Task</Title>
+			<Author>Jesus Fernandez</Author>
+			<Description>Creates an asynchronous task with a return type.</Description>
+			<HelpUrl>github.com/jfevia/Snippets</HelpUrl>
+			<Shortcut>task</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Threading.Tasks</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>T</ID>
+					<ToolTip>The data type.</ToolTip>
+					<Default>T</Default>
+					<Function></Function>
+				</Literal>
+				<Literal Editable="true">
+					<ID>MethodName</ID>
+					<ToolTip>The name of the method.</ToolTip>
+					<Default>MethodName</Default>
+					<Function></Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" Delimiter="$">
+				<![CDATA[public async Task<$T$> $MethodName$Async()
+{
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
